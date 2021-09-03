@@ -1,0 +1,56 @@
+{
+    "scripts": {
+        "test": "jest",
+        "build": "rimraf dist && tsup src/index.ts --dts --format cjs,esm",
+        "package-check": "npx @skypack/package-check"
+    },
+    "devDependencies": {
+        "@types/jest": "26.0.24",
+        "esbuild": "0.12.18",
+        "esbuild-jest": "0.5.0",
+        "eslint": "7.32.0",
+        "eslint-config-hardcore": "20.0.0",
+        "fast-check": "2.17.0",
+        "jest": "27.0.6",
+        "rimraf": "3.0.2",
+        "tsup": "4.13.1",
+        "typescript": "4.3.5"
+    },
+    "name": "@hikae/gpt",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [
+        "gpt3"
+    ],
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "exports": {
+        "require": "./index.js",
+        "import": "./index.mjs",
+        "default": "./index.mjs"
+    },
+    "files": [
+        "dist"
+    ],
+    "size-limit": [
+        {
+            "path": "dist/index.js",
+            "limit": "4500 ms"
+        },
+        {
+            "path": "dist/index.mjs",
+            "limit": "4500 ms"
+        }
+    ],
+    "author": "HikaruEgashira",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/HikaruEgashira/gpt.git"
+    },
+    "bugs": {
+        "url": "https://github.com/HikaruEgashira/gpt/issues"
+    },
+    "homepage": "https://github.com/HikaruEgashira/gpt#readme"
+}
