@@ -28,7 +28,7 @@ async function main() {
             ["最高の気分だ！", "Positive"],
         ],
         labels: ["Positive", "Negative", "Neutral"],
-        query: "今日は待ちに待った晴れの日だ",
+        query: "今日は晴れの日だ",
         search_model: "ada",
         model: "ada",
     });

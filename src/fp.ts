@@ -25,7 +25,7 @@ import { OptionsOfTextResponseBody as Options } from "got";
  */
 export type App = ReturnType<typeof createApi>;
 
-const api = createApi;
+const api = createApi as (apiKey: string) => App;
 
 /**
  * completion

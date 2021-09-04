@@ -9,7 +9,7 @@
         "got": "^11.8.2"
     },
     "devDependencies": {
-        "@hikae/gpt": "^0.0.3",
+        "@hikae/gpt": "^0.0.4",
         "@types/jest": "26.0.24",
         "dotenv": "^10.0.0",
         "esbuild": "^0.12.25",
@@ -23,7 +23,7 @@
     },
     "name": "@hikae/gpt",
     "version": "0.0.4",
-    "description": "",
+    "description": "A framework to build OpenAPI apps using nodejs",
     "keywords": [
         "gpt3"
     ],
@@ -40,11 +40,11 @@
     ],
     "size-limit": [
         {
-            "path": "dist/class.js",
+            "path": "dist/index.js",
             "limit": "4500 ms"
         },
         {
-            "path": "dist/class.mjs",
+            "path": "dist/index.mjs",
             "limit": "4500 ms"
         }
     ],

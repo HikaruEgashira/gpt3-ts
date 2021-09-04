@@ -14,9 +14,9 @@ async function main() {
 
     const app = openai.api(key);
 
-    // classification(app);
-    // completion(app);
-    // engine(app);
-    // search(app);
+    classification(app);
+    completion(app);
+    engine(app);
+    search(app);
 }
 main();

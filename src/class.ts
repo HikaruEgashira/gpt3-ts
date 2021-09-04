@@ -36,6 +36,7 @@ export interface AppOptions {
 
 /**
  * A OpenAPI App
+ * @deprecated
  */
 export class App {
     api: ReturnType<typeof createApi>;

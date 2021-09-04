@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@hikae/gpt': ^0.0.3
+  '@hikae/gpt': ^0.0.4
   '@types/jest': 26.0.24
   dotenv: ^10.0.0
   esbuild: ^0.12.25
@@ -18,7 +18,7 @@ dependencies:
   got: 11.8.2
 
 devDependencies:
-  '@hikae/gpt': 0.0.3
+  '@hikae/gpt': 0.0.4
   '@types/jest': 26.0.24
   dotenv: 10.0.0
   esbuild: 0.12.25
@@ -420,8 +420,8 @@ packages:
       - supports-color
     dev: true
 
-  /@hikae/gpt/0.0.3:
-    resolution: {integrity: sha512-e+BFaTHmdKfCfv67qTYbmB3XZTwX8sdhU8O9ut+jUECwrvTEshv0jl7ugTFeD5QD+kXN+04pMBQqJ2+i6ygwIA==}
+  /@hikae/gpt/0.0.4:
+    resolution: {integrity: sha512-5W0oE0f8PunI4V4Ycx5odR7/b47dIh4yQddFuVDku4ward8nzFEZBzE8go2TX1wGRxYR8LZqLojEYDrsGUl4Mw==}
     dependencies:
       got: 11.8.2
     dev: true
