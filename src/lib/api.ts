@@ -1,4 +1,4 @@
-import got from "got";
+import ky from "ky-universal";
 
 // export const createFetch =
 //     (apiKey: string) =>
@@ -18,7 +18,7 @@ import got from "got";
 //     };
 
 export const createApi = (apiKey: string) =>
-    got.extend({
+    ky.extend({
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${apiKey}`,

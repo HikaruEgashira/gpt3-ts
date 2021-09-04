@@ -12,5 +12,5 @@ export const classification = async (app: App) => {
         search_model: "ada",
         model: "ada",
     })(app);
-    console.log(result);
+    console.log("[classification]", result.label);
 };

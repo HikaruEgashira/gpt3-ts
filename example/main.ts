@@ -1,10 +1,11 @@
-import { openai } from "../src";
+import { openai } from "../src/index";
 import { classification } from "./classification";
 import { completion } from "./completion";
 import { engine } from "./engine";
 import { search } from "./search";
 
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 async function main() {
     const key = process.env.OPENAI_API_KEY;

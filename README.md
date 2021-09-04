@@ -9,7 +9,7 @@ yarn add @hikae/gpt
 ## example
 
 ```ts
-import { App } from "@hikae/gpt";
+import { App, openai } from "@hikae/gpt";
 
 require("dotenv").config();
 

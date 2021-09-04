@@ -2,7 +2,8 @@
 
 import { App, openai } from "@hikae/gpt";
 
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 async function main() {
     const key = process.env.OPENAI_API_KEY;
@@ -23,7 +24,7 @@ async function main() {
         model: "ada",
     })(app);
 
-    console.log(result.label);
+    console.log("[classification]", result.label);
     // result = 'Positive'
 }
 main();

@@ -1,5 +1,5 @@
-import { App, openai } from "../src";
-import { SearchOpts } from "../src/types";
+import { App, openai } from "../src/index";
+import { SearchOpts } from "../src/types/index";
 
 export const search = async (app: App) => {
     const searchOpts: SearchOpts = {
@@ -7,7 +7,7 @@ export const search = async (app: App) => {
         query: "the president",
     };
     const result = await openai.search(searchOpts)(app);
-    console.log(result);
+    console.log("[search]", result.data);
     // result = {
     //     object: "list",
     //     data: [

@@ -1,22 +1,23 @@
-import { createApi } from "./lib/api";
 import {
-    Completion,
-    CompletionOpts,
-    Engine,
-    ListEngine,
-    Search,
-    SearchOpts,
-} from "./types";
-import {
+    createApi,
     classificationsURL,
     completionURL,
     DEFAULT_ENGINE,
     engineListURL,
     engineURL,
     searchURL,
-} from "./lib/config";
-import { OptionsOfTextResponseBody as Options } from "got";
-import { Classification, ClassificationOpts } from "./types/classification";
+} from "./lib/index";
+import {
+    Completion,
+    CompletionOpts,
+    Classification,
+    ClassificationOpts,
+    Engine,
+    ListEngine,
+    Search,
+    SearchOpts,
+} from "./types";
+import { Options } from "ky";
 
 /** App initialization options */
 export interface AppOptions {
