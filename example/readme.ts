@@ -1,14 +1,5 @@
-# gpt
+// pnpm esno example/readme.ts
 
-## install
-
-```bash
-yarn add @hikae/gpt
-```
-
-## example
-
-```ts
 import { App } from "@hikae/gpt";
 
 require("dotenv").config();
@@ -36,4 +27,3 @@ async function main() {
     // result = 'Positive'
 }
 main();
-```

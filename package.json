@@ -9,7 +9,7 @@
         "got": "^11.8.2"
     },
     "devDependencies": {
-        "@hikae/gpt": "^0.0.2",
+        "@hikae/gpt": "^0.0.3",
         "@types/jest": "26.0.24",
         "dotenv": "^10.0.0",
         "esbuild": "^0.12.25",
