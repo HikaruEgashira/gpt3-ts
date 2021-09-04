@@ -23,17 +23,20 @@ import { OptionsOfTextResponseBody as Options } from "got";
  * @example
  * const app: App = api(apiKey)
  */
-export type App = ReturnType<typeof createApi>;
+export type App = { api: ReturnType<typeof createApi>; engineId: string };
 
-const api = createApi as (apiKey: string) => App;
+const app = (apiKey: string, engineId = DEFAULT_ENGINE): App => ({
+    api: createApi(apiKey),
+    engineId,
+});
 
 /**
- * completion
+ * Completion
  * @link https://beta.openai.com/docs/guides/completion/completion
  */
 const completion =
-    (opts: CompletionOpts, engineId = DEFAULT_ENGINE) =>
-    async (api: App) => {
+    (opts: CompletionOpts) =>
+    async ({ api, engineId }: App) => {
         const url = completionURL(engineId);
         const options: Options = {
             json: opts,
@@ -43,12 +46,12 @@ const completion =
     };
 
 /**
- * search
+ * Search
  * @link https://beta.openai.com/docs/guides/search/search
  */
 const search =
-    (opts: SearchOpts, engineId = DEFAULT_ENGINE) =>
-    async (api: App) => {
+    (opts: SearchOpts) =>
+    async ({ api, engineId }: App) => {
         const url = searchURL(engineId);
         const options: Options = {
             json: opts,
@@ -61,39 +64,43 @@ const search =
  * Create Classification
  * @link https://beta.openai.com/docs/api-reference/classifications/create
  */
-const classification = (opts: ClassificationOpts) => async (api: App) => {
-    const url = classificationsURL();
-    const options: Options = {
-        json: opts,
+const classification =
+    (opts: ClassificationOpts) =>
+    async ({ api }: App) => {
+        const url = classificationsURL();
+        const options: Options = {
+            json: opts,
+        };
+        const res = await api.post(url, options).json<Classification>();
+        return res;
     };
-    const res = await api.post(url, options).json<Classification>();
-    return res;
-};
 
 /**
  * List engines
  * @link https://beta.openai.com/docs/api-reference/engines/list
  */
-const listEngines = () => async (api: App) => {
-    const url = engineListURL();
-    const res = await api.get(url).json<ListEngine>();
-    return res;
-};
+const listEngines =
+    () =>
+    async ({ api }: App) => {
+        const url = engineListURL();
+        const res = await api.get(url).json<ListEngine>();
+        return res;
+    };
 
 /**
  * Retrieve engine
  * @link https://beta.openai.com/docs/api-reference/engines/retrieve
  */
 const engine =
-    (engineId = DEFAULT_ENGINE) =>
-    async (api: App) => {
+    () =>
+    async ({ api, engineId }: App) => {
         const url = engineURL(engineId);
         const res = api.get(url).json<Engine>();
         return res;
     };
 
 export const openai = {
-    api,
+    app,
     completion,
     search,
     classification,

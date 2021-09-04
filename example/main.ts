@@ -12,7 +12,7 @@ async function main() {
         throw new Error("[OPENAI_API_KEY] not found");
     }
 
-    const app = openai.api(key);
+    const app = openai.app(key);
 
     classification(app);
     completion(app);

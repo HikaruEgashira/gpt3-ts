@@ -10,7 +10,7 @@ async function main() {
         throw new Error("[OPENAI_API_KEY] not found");
     }
 
-    const app: App = openai.api(key);
+    const app: App = openai.app(key);
     const result = await openai.classification({
         examples: [
             ["幸せ", "Positive"],
