@@ -45,6 +45,14 @@ main();
 
 ## deno
 
+- skypack
+
 ```ts
 import { openai } from 'https://cdn.skypack.dev/@hikae/gpt?dts'
+```
+
+- esm.sh
+
+```ts
+import { openai } from 'https://esm.sh/@hikae/gpt?bundle'
 ```
