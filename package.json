@@ -2,16 +2,16 @@
     "scripts": {
         "test": "jest",
         "dev": "esno example/main.ts",
-        "build": "rimraf dist && tsup src/class.ts src/fp.ts --dts --format cjs,esm",
+        "build": "rimraf dist && tsup src/index.ts --dts --format cjs,esm",
         "package-check": "npx @skypack/package-check"
     },
     "dependencies": {
-        "dotenv": "^10.0.0",
         "got": "^11.8.2"
     },
     "devDependencies": {
-        "@hikae/gpt": "^0.0.1",
+        "@hikae/gpt": "^0.0.2",
         "@types/jest": "26.0.24",
+        "dotenv": "^10.0.0",
         "esbuild": "^0.12.25",
         "esbuild-jest": "^0.5.0",
         "eslint": "^7.32.0",
@@ -27,20 +27,13 @@
     "keywords": [
         "gpt3"
     ],
-    "main": "dist/class.js",
-    "module": "dist/class.mjs",
-    "types": "dist/class.d.ts",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
     "exports": {
-        "./class": {
-            "require": "./dist/class.js",
-            "import": "./dist/class.mjs",
-            "default": "./dist/class.mjs"
-        },
-        "./fp": {
-            "require": "./dist/fp.js",
-            "import": "./dist/fp.mjs",
-            "default": "./dist/fp.mjs"
-        }
+        "require": "./dist/index.js",
+        "import": "./dist/index.mjs",
+        "default": "./dist/index.mjs"
     },
     "files": [
         "dist"

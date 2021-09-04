@@ -11,26 +11,23 @@ jobs:
         os: [ubuntu-latest]
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Use Node ${{ matrix.node }}
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Install deps and build (with cache)
-        uses: bahmutov/npm-install@v1
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - uses: pnpm/action-setup@v2.0.1
         with:
-          useLockFile: false
-
+          version: 6.14.6
+          run_install: true
       - name: Check Package
         run: npx @skypack/package-check
-
       - name: Test
         id: test
         run: yarn test --ci --coverage --maxWorkers=2
-
       - name: Build
         id: build
         run: yarn build
