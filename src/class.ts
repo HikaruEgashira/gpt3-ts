@@ -6,7 +6,7 @@ import {
     engineListURL,
     engineURL,
     searchURL,
-} from "./lib/index";
+} from "./lib/mod";
 import {
     Completion,
     CompletionOpts,
@@ -16,7 +16,14 @@ import {
     ListEngine,
     Search,
     SearchOpts,
-} from "./types";
+} from "./types/mod";
+import {
+    classification,
+    completion,
+    engine,
+    listEngines,
+    search,
+} from "./core/mod";
 import { Options } from "ky";
 
 /** App initialization options */
@@ -54,11 +61,7 @@ export class App {
      * @link https://beta.openai.com/docs/guides/completion/completion
      */
     async completion(opts: CompletionOpts) {
-        const url = completionURL(this.engineId);
-        const options: Options = {
-            json: opts,
-        };
-        return await this.api.post(url, options).json<Completion>();
+        return completion(opts)({ api: this.api, engineId: this.engineId });
     }
 
     // search
@@ -68,11 +71,7 @@ export class App {
      * @link https://beta.openai.com/docs/guides/search/search
      */
     async search(opts: SearchOpts) {
-        const url = searchURL(this.engineId);
-        const options: Options = {
-            json: opts,
-        };
-        return await this.api.post(url, options).json<Search>();
+        return search(opts)({ api: this.api, engineId: this.engineId });
     }
 
     // Classification
@@ -82,11 +81,7 @@ export class App {
      * @link https://beta.openai.com/docs/api-reference/classifications/create
      */
     async classification(opts: ClassificationOpts) {
-        const url = classificationsURL();
-        const options: Options = {
-            json: opts,
-        };
-        return await this.api.post(url, options).json<Classification>();
+        return classification(opts)({ api: this.api, engineId: this.engineId });
     }
 
     // Engines
@@ -96,8 +91,7 @@ export class App {
      * @link https://beta.openai.com/docs/api-reference/engines/list
      */
     async listEngines() {
-        const url = engineListURL();
-        return await this.api.get(url).json<ListEngine>();
+        return listEngines()({ api: this.api, engineId: this.engineId });
     }
 
     /**
@@ -105,7 +99,6 @@ export class App {
      * @link https://beta.openai.com/docs/api-reference/engines/retrieve
      */
     async engine(engineId?: string) {
-        const url = engineURL(engineId ?? this.engineId);
-        return await this.api.get(url).json<Engine>();
+        return engine()({ api: this.api, engineId: engineId ?? this.engineId });
     }
 }

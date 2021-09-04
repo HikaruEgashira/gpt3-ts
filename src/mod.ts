@@ -1,3 +1,3 @@
 export * from "./fp";
-export * from "./types/index";
+export * from "./types/mod";
 export { App as OpenAPI } from "./class";

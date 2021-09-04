@@ -1,5 +1,10 @@
 # gpt
 
+OpenAI API made easy !!
+now deno support !
+
+<https://beta.openai.com/docs>
+
 ## install
 
 ```bash
@@ -36,4 +41,10 @@ async function main() {
     // result = 'Positive'
 }
 main();
+```
+
+## deno
+
+```ts
+import { openai } from 'https://cdn.skypack.dev/@hikae/gpt?dts'
 ```

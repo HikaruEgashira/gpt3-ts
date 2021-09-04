@@ -1,4 +1,4 @@
-import { openai } from "../src/index";
+import { openai } from "@hikae/gpt";
 import { classification } from "./classification";
 import { completion } from "./completion";
 import { engine } from "./engine";

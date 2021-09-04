@@ -1,4 +1,4 @@
-import { openai, App } from "../src/fp";
+import { openai, App } from "@hikae/gpt";
 
 export const classification = async (app: App) => {
     const result = await openai.classification({

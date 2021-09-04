@@ -1,5 +1,4 @@
-import { App, openai } from "../src/index";
-import { SearchOpts } from "../src/types/index";
+import { App, openai, SearchOpts } from "@hikae/gpt";
 
 export const search = async (app: App) => {
     const searchOpts: SearchOpts = {

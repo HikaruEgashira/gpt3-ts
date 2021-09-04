@@ -2,7 +2,8 @@
     "scripts": {
         "test": "jest",
         "dev": "esmo example/main.ts",
-        "build": "rimraf dist && tsup src/index.ts --dts --format cjs,esm",
+        "dev:deno": "deno run --unstable -A example/deno/main.ts",
+        "build": "rimraf dist && tsup src/mod.ts --dts --format cjs,esm",
         "package-check": "npx @skypack/package-check"
     },
     "dependencies": {
@@ -23,18 +24,18 @@
         "typescript": "^4.4.2"
     },
     "name": "@hikae/gpt",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "A framework to build OpenAPI apps using nodejs",
     "keywords": [
         "gpt3"
     ],
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
+    "main": "dist/mod.js",
+    "module": "dist/mod.mjs",
+    "types": "dist/mod.d.ts",
     "exports": {
-        "require": "./dist/index.js",
-        "import": "./dist/index.mjs",
-        "default": "./dist/index.mjs"
+        "require": "./dist/mod.js",
+        "import": "./dist/mod.mjs",
+        "default": "./dist/mod.mjs"
     },
     "files": [
         "dist"

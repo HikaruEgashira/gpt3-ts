@@ -1,5 +1,4 @@
-import { App, openai } from "../src/index";
-import { CompletionOpts } from "../src/types/index";
+import { App, openai, CompletionOpts } from "@hikae/gpt";
 
 export const completion = async (app: App) => {
     const completionOpts: CompletionOpts = {
