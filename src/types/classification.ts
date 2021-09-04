@@ -63,17 +63,17 @@ export type ClassificationOpts =
           expand: string[];
       }>;
 
+interface ClassificationDocument {
+    document: number;
+    label: string;
+    text: string;
+}
+
 export interface Classification {
     completion: string;
     label: string;
     model: string;
     object: string;
     search_model: string;
-    selected_examples: Document[];
-}
-
-export interface Document {
-    document: number;
-    label: string;
-    text: string;
+    selected_examples: ClassificationDocument[];
 }

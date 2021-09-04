@@ -6,7 +6,13 @@ export interface SearchOpts {
     returnMetadata?: boolean;
 }
 
+export interface SearchDocument {
+    document: number;
+    object: string;
+    score: number;
+}
+
 export interface Search {
-    data: Document[];
+    data: SearchDocument[];
     object: string;
 }
