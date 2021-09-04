@@ -1,15 +1,13 @@
 {
     "scripts": {
         "test": "jest",
-        "dev": "esno test/main.ts",
-        "build": "rimraf dist && tsup src/index.ts --dts --format cjs,esm",
+        "dev": "esno example/main.ts",
+        "build": "rimraf dist && tsup src/class.ts src/fp.ts --dts --format cjs,esm",
         "package-check": "npx @skypack/package-check"
     },
     "dependencies": {
         "dotenv": "^10.0.0",
-        "fp-ts": "^2.11.1",
-        "got": "^11.8.2",
-        "node-fetch": "^3.0.0"
+        "got": "^11.8.2"
     },
     "devDependencies": {
         "@types/jest": "26.0.24",
@@ -28,24 +26,31 @@
     "keywords": [
         "gpt3"
     ],
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
+    "main": "dist/class.js",
+    "module": "dist/class.mjs",
+    "types": "dist/class.d.ts",
     "exports": {
-        "require": "./index.js",
-        "import": "./index.mjs",
-        "default": "./index.mjs"
+        "./class": {
+            "require": "./dist/class.js",
+            "import": "./dist/class.mjs",
+            "default": "./dist/class.mjs"
+        },
+        "./fp": {
+            "require": "./dist/fp.js",
+            "import": "./dist/fp.mjs",
+            "default": "./dist/fp.mjs"
+        }
     },
     "files": [
         "dist"
     ],
     "size-limit": [
         {
-            "path": "dist/index.js",
+            "path": "dist/class.js",
             "limit": "4500 ms"
         },
         {
-            "path": "dist/index.mjs",
+            "path": "dist/class.mjs",
             "limit": "4500 ms"
         }
     ],

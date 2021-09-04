@@ -4,11 +4,11 @@ import {
     CompletionOpts,
     Engine,
     ListEngine,
-    OpenAI,
     Search,
     SearchOpts,
 } from "./types";
 import {
+    classificationsURL,
     completionURL,
     DEFAULT_ENGINE,
     engineListURL,
@@ -16,6 +16,7 @@ import {
     searchURL,
 } from "./lib/config";
 import { OptionsOfTextResponseBody as Options } from "got";
+import { Classification, ClassificationOpts } from "./types/classification";
 
 /** App initialization options */
 export interface AppOptions {
@@ -36,10 +37,9 @@ export interface AppOptions {
 /**
  * A OpenAPI App
  */
-export class App implements OpenAI {
+export class App {
     api: ReturnType<typeof createApi>;
     engineId: string;
-
     constructor({ key, engineId }: AppOptions) {
         this.api = createApi(key);
         this.engineId = engineId ?? DEFAULT_ENGINE;
@@ -51,12 +51,12 @@ export class App implements OpenAI {
      * completion
      * @link https://beta.openai.com/docs/guides/completion/completion
      */
-    async completion(opts: CompletionOpts): Promise<Completion> {
+    async completion(opts: CompletionOpts) {
         const url = completionURL(this.engineId);
         const options: Options = {
             json: opts,
         };
-        return this.api.post(url, options).json();
+        return await this.api.post(url, options).json<Completion>();
     }
 
     // search
@@ -65,12 +65,26 @@ export class App implements OpenAI {
      * search
      * @link https://beta.openai.com/docs/guides/search/search
      */
-    async search(opts: SearchOpts): Promise<Search> {
+    async search(opts: SearchOpts) {
         const url = searchURL(this.engineId);
         const options: Options = {
             json: opts,
         };
-        return this.api.post(url, options).json();
+        return await this.api.post(url, options).json<Search>();
+    }
+
+    // Classification
+
+    /**
+     * Create Classification
+     * @link https://beta.openai.com/docs/api-reference/classifications/create
+     */
+    async classification(opts: ClassificationOpts) {
+        const url = classificationsURL();
+        const options: Options = {
+            json: opts,
+        };
+        return await this.api.post(url, options).json<Classification>();
     }
 
     // Engines
@@ -79,17 +93,17 @@ export class App implements OpenAI {
      * List engines
      * @link https://beta.openai.com/docs/api-reference/engines/list
      */
-    async listEngines(): Promise<ListEngine> {
+    async listEngines() {
         const url = engineListURL();
-        return this.api.get(url).json();
+        return await this.api.get(url).json<ListEngine>();
     }
 
     /**
      * Retrieve engine OR get current engine
      * @link https://beta.openai.com/docs/api-reference/engines/retrieve
      */
-    async engine(engineId?: string): Promise<Engine> {
+    async engine(engineId?: string) {
         const url = engineURL(engineId ?? this.engineId);
-        return this.api.get(url).json();
+        return await this.api.get(url).json<Engine>();
     }
 }
