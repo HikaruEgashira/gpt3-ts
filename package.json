@@ -22,7 +22,7 @@
         "typescript": "^4.4.2"
     },
     "name": "@hikae/gpt",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "A framework to build OpenAPI apps using nodejs",
     "keywords": [
         "gpt3"
