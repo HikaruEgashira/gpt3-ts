@@ -1,4 +1,4 @@
-import { App } from "../src/class";
+import { openai } from "../src";
 import { classification } from "./classification";
 import { completion } from "./completion";
 import { engine } from "./engine";
@@ -12,7 +12,7 @@ async function main() {
         throw new Error("[OPENAI_API_KEY] not found");
     }
 
-    const app = new App({ key });
+    const app = openai.api(key);
 
     // classification(app);
     // completion(app);

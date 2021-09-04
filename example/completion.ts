@@ -1,4 +1,4 @@
-import { App } from "../src/class";
+import { App, openai } from "../src";
 import { CompletionOpts } from "../src/types";
 
 export const completion = async (app: App) => {
@@ -12,7 +12,7 @@ export const completion = async (app: App) => {
         logprobs: null,
         stop: "\n",
     };
-    const result = await app.completion(completionOpts);
+    const result = await openai.completion(completionOpts)(app);
     console.log(result);
 
     // result.choices: [

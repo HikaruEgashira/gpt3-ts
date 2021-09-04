@@ -1,6 +1,6 @@
 // pnpm esno example/readme.ts
 
-import { App } from "@hikae/gpt";
+import { openai, App } from "@hikae/gpt";
 
 require("dotenv").config();
 
@@ -10,9 +10,9 @@ async function main() {
         throw new Error("[OPENAI_API_KEY] not found");
     }
 
-    const app = new App({ key });
+    const app: App = openai.api(key);
 
-    const result = await app.classification({
+    const result = await openai.classification({
         examples: [
             ["幸せ", "Positive"],
             ["私は悲しい、、", "Negative"],
@@ -22,7 +22,7 @@ async function main() {
         query: "今日は待ちに待った晴れの日だ",
         search_model: "ada",
         model: "ada",
-    });
+    })(app);
     console.log(result.label);
     // result = 'Positive'
 }

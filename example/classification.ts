@@ -1,7 +1,7 @@
-import { App } from "../src/class";
+import { openai, App } from "../src/fp";
 
 export const classification = async (app: App) => {
-    const result = await app.classification({
+    const result = await openai.classification({
         examples: [
             ["幸せ", "Positive"],
             ["私は悲しい、、", "Negative"],
@@ -11,6 +11,6 @@ export const classification = async (app: App) => {
         query: "今日は待ちに待った晴れの日だ",
         search_model: "ada",
         model: "ada",
-    });
+    })(app);
     console.log(result);
 };

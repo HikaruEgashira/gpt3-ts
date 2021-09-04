@@ -1,4 +1,4 @@
-import { App } from "../src/class";
+import { App, openai } from "../src";
 import { SearchOpts } from "../src/types";
 
 export const search = async (app: App) => {
@@ -6,7 +6,7 @@ export const search = async (app: App) => {
         documents: ["White House", "hospital", "school"],
         query: "the president",
     };
-    const result = await app.search(searchOpts);
+    const result = await openai.search(searchOpts)(app);
     console.log(result);
     // result = {
     //     object: "list",
