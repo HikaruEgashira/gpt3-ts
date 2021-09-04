@@ -1,9 +1,1 @@
-{
-    "extends": [
-        "hardcore",
-        "hardcore/jest",
-        "hardcore/fp",
-        "hardcore/ts",
-        "hardcore/node"
-    ]
-}
+{}

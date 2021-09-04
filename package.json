@@ -1,20 +1,26 @@
 {
     "scripts": {
         "test": "jest",
+        "dev": "esno test/main.ts",
         "build": "rimraf dist && tsup src/index.ts --dts --format cjs,esm",
         "package-check": "npx @skypack/package-check"
     },
+    "dependencies": {
+        "dotenv": "^10.0.0",
+        "fp-ts": "^2.11.1",
+        "got": "^11.8.2",
+        "node-fetch": "^3.0.0"
+    },
     "devDependencies": {
         "@types/jest": "26.0.24",
-        "esbuild": "0.12.18",
-        "esbuild-jest": "0.5.0",
-        "eslint": "7.32.0",
-        "eslint-config-hardcore": "20.0.0",
-        "fast-check": "2.17.0",
-        "jest": "27.0.6",
-        "rimraf": "3.0.2",
-        "tsup": "4.13.1",
-        "typescript": "4.3.5"
+        "esbuild": "^0.12.25",
+        "esbuild-jest": "^0.5.0",
+        "eslint": "^7.32.0",
+        "esno": "^0.9.1",
+        "jest": "^27.1.0",
+        "rimraf": "^3.0.2",
+        "tsup": "^4.14.0",
+        "typescript": "^4.4.2"
     },
     "name": "@hikae/gpt",
     "version": "1.0.0",
