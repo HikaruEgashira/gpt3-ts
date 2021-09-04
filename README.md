@@ -19,9 +19,8 @@ async function main() {
         throw new Error("[OPENAI_API_KEY] not found");
     }
 
-    const app = new App({ key });
-
-    const result = await app.classification({
+    const app: App = openai.app(key);
+    const result = await openai.classification({
         examples: [
             ["幸せ", "Positive"],
             ["私は悲しい、、", "Negative"],
@@ -31,7 +30,8 @@ async function main() {
         query: "今日は晴れの日だ",
         search_model: "ada",
         model: "ada",
-    });
+    })(app);
+
     console.log(result.label);
     // result = 'Positive'
 }
