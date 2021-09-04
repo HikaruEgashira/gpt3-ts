@@ -2,23 +2,17 @@ name: CI
 on: [push]
 jobs:
   build:
-    name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
-
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node: ["14.x"]
-        os: [ubuntu-latest]
-
+    name: Build, lint, and test on Node
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Cache pnpm modules
         uses: actions/cache@v2
         with:
           path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ubuntu-latest-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-
+            ubuntu-latest-
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.14.6
@@ -26,22 +20,6 @@ jobs:
       - name: Check Package
         run: npx @skypack/package-check
       - name: Test
-        id: test
         run: yarn test --ci --coverage --maxWorkers=2
       - name: Build
-        id: build
         run: yarn build
-      - if: failure() && steps.test.outcome == 'failure'
-        uses: unsplash/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          msg: "テストでエラーが発生しました！`yarn test`でテストの修正お願いします🙏"
-          check_for_duplicate_msg: false
-      - if: failure() && steps.build.outcome == 'failure'
-        uses: unsplash/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          msg: "ビルドでエラーが発生しました。`yarn build`でテストの修正お願いします🙏"
-          check_for_duplicate_msg: false
