@@ -1,6 +1,6 @@
-import { SearchOpts, App, Search } from "dist";
-import { Options } from "ky";
+import { SearchOpts, App, Search } from "~/mod";
 import { searchURL } from "~/lib/mod";
+import { Options } from "ky";
 
 /**
  * Search

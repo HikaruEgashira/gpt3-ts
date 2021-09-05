@@ -1,6 +1,6 @@
-import { CompletionOpts, App, Completion } from "dist";
-import { Options } from "ky";
+import { App, Completion, CompletionOpts } from "~/mod";
 import { completionURL } from "~/lib/mod";
+import { Options } from "ky";
 
 /**
  * Completion

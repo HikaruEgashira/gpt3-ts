@@ -1,6 +1,6 @@
-import { ClassificationOpts, App, Classification } from "dist";
-import { Options } from "ky";
+import { ClassificationOpts, App, Classification } from "~/mod";
 import { classificationsURL } from "~/lib/mod";
+import { Options } from "ky";
 
 /**
  * Create Classification
