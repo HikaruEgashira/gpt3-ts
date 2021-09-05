@@ -1,6 +1,8 @@
 import { App, openai } from "https://cdn.skypack.dev/@hikae/gpt?dts";
 import "https://deno.land/x/dotenv@v3.0.0/load.ts";
 
+import { negpos } from "./negpos.ts";
+
 const key = Deno.env.get("OPENAI_API_KEY");
 if (!key) {
     throw new Error("[OPENAI_API_KEY] not found");
@@ -8,17 +10,7 @@ if (!key) {
 
 const app: App = openai.app(key);
 
-const result = await openai.classification({
-    examples: [
-        ["幸せ", "Positive"],
-        ["私は悲しい、、", "Negative"],
-        ["最高の気分だ！", "Positive"],
-    ],
-    labels: ["Positive", "Negative", "Neutral"],
-    query: "今日は晴れの日だ",
-    search_model: "ada",
-    model: "ada",
-})(app);
+//// tasks
 
-console.log(result.label);
-// result = 'Positive'
+await negpos("いい一日だなあ")(app);
+// = 'Positive'
