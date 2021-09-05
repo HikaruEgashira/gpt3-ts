@@ -1,5 +1,5 @@
 import { App, openai } from "https://cdn.skypack.dev/@hikae/gpt?dts";
-import "https://deno.land/x/dotenv/load.ts";
+import "https://deno.land/x/dotenv@v3.0.0/load.ts";
 
 const key = Deno.env.get("OPENAI_API_KEY");
 if (!key) {
@@ -7,6 +7,7 @@ if (!key) {
 }
 
 const app: App = openai.app(key);
+
 const result = await openai.classification({
     examples: [
         ["幸せ", "Positive"],
