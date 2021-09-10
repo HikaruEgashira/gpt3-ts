@@ -10,10 +10,24 @@ import {
 /**
  * A OpenAPI App
  * @example
- * const app: App = api(apiKey)
+ * const app: App = app(apiKey)
  */
 export type App = { api: ReturnType<typeof createApi>; engineId: string };
 
+/**
+ * create openai instance
+ * @example
+ * const app: App = app(apiKey)
+ *
+ * // basic
+ * const completion = await openai.completion(opts)(app)
+ *
+ * // fp-ts
+ * const classification = await pipe(
+ *   app,
+ *   openai.classification(opts),
+ * )
+ */
 const app = (apiKey: string, engineId = DEFAULT_ENGINE): App => ({
     api: createApi(apiKey),
     engineId,
