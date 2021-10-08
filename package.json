@@ -14,7 +14,7 @@
         "@hikae/gpt": "file:.",
         "@types/jest": "26.0.24",
         "dotenv": "10.0.0",
-        "esbuild": "0.12.29",
+        "esbuild": "0.13.4",
         "esbuild-jest": "0.5.0",
         "eslint": "7.32.0",
         "esmo": "0.9.1",
