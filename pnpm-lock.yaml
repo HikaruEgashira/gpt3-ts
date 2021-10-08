@@ -7,7 +7,7 @@ specifiers:
   esbuild: 0.13.4
   esbuild-jest: 0.5.0
   eslint: 7.32.0
-  esmo: 0.9.1
+  esmo: 0.10.1
   jest: 27.2.4
   ky: ^0.28.5
   ky-universal: ^0.9.1
@@ -26,7 +26,7 @@ devDependencies:
   esbuild: 0.13.4
   esbuild-jest: 0.5.0_esbuild@0.13.4
   eslint: 7.32.0
-  esmo: 0.9.1
+  esmo: 0.10.1
   jest: 27.2.4
   rimraf: 3.0.2
   tsup: 4.14.0_typescript@4.4.3
@@ -1663,10 +1663,10 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-node-loader/0.3.1:
-    resolution: {integrity: sha512-75xPOySulti9R5LwYOMmKiwHyXGr/f89I7UkHolLxRqeBiUNqcyCmNTjv+fO2WV9G3f7LDKVZJlbWoYh5LBpfQ==}
+  /esbuild-node-loader/0.4.2:
+    resolution: {integrity: sha512-3SieWnHgnhMKwn+qG2AjQq3Yf9RrgHeKGxGLauaLKfBTCpbm4nJbUt4CV3waHcRizILzlpZbESLkY9rnFHr6/w==}
     dependencies:
-      esbuild: 0.12.29
+      esbuild: 0.13.4
     dev: true
 
   /esbuild-openbsd-64/0.13.4:
@@ -1677,12 +1677,12 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-register/3.0.0_esbuild@0.12.29:
+  /esbuild-register/3.0.0_esbuild@0.13.4:
     resolution: {integrity: sha512-No7U3ZUd6gPrrC6gqdb3XFcf2lNqzn8nvQXcgcyOl8szMVuN6YUvOplnmakxWyogI9d8SiJMl0uzBzJck+Aoxw==}
     peerDependencies:
       esbuild: '>=0.12 <1'
     dependencies:
-      esbuild: 0.12.29
+      esbuild: 0.13.4
       jsonc-parser: 3.0.0
     dev: true
 
@@ -1854,14 +1854,14 @@ packages:
       - supports-color
     dev: true
 
-  /esmo/0.9.1:
-    resolution: {integrity: sha512-T8AlIePktd2MJSekJqbuMYYM5tLwVgg+HZEqgVCWryPqmGHuhqY6RvTyT8LhAICSyhFn1hVQdEbnrlGL+AM5Ig==}
+  /esmo/0.10.1:
+    resolution: {integrity: sha512-HvPfHu02E8BtW60qBy32TTmDy7IZq8sz+jmEiRUfey+BEqfHcP8bksM538VDfc5XKCOytm5KL4gGShzIfOr4sg==}
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
-      esbuild: 0.12.29
-      esbuild-node-loader: 0.3.1
-      esbuild-register: 3.0.0_esbuild@0.12.29
+      esbuild: 0.13.4
+      esbuild-node-loader: 0.4.2
+      esbuild-register: 3.0.0_esbuild@0.13.4
     dev: true
 
   /espree/7.3.1:
