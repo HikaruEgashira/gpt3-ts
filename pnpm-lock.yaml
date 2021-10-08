@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@hikae/gpt': file:.
-  '@types/jest': 26.0.24
+  '@types/jest': 27.0.2
   dotenv: 10.0.0
   esbuild: 0.13.4
   esbuild-jest: 0.5.0
@@ -21,7 +21,7 @@ dependencies:
 
 devDependencies:
   '@hikae/gpt': 'link:'
-  '@types/jest': 26.0.24
+  '@types/jest': 27.0.2
   dotenv: 10.0.0
   esbuild: 0.13.4
   esbuild-jest: 0.5.0_esbuild@0.13.4
@@ -766,11 +766,11 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/26.0.24:
-    resolution: {integrity: sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==}
+  /@types/jest/27.0.2:
+    resolution: {integrity: sha512-4dRxkS/AFX0c5XW6IPMNOydLn2tEhNhJV7DnYK+0bjoJZ+QTmfucBlihX7aoEsh/ocYtkLC73UbnBXBXIxsULA==}
     dependencies:
-      jest-diff: 26.6.2
-      pretty-format: 26.6.2
+      jest-diff: 27.2.4
+      pretty-format: 27.2.4
     dev: true
 
   /@types/node/16.4.12:
@@ -1498,11 +1498,6 @@ packages:
   /detect-newline/3.1.0:
     resolution: {integrity: sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==}
     engines: {node: '>=8'}
-    dev: true
-
-  /diff-sequences/26.6.2:
-    resolution: {integrity: sha512-Mv/TDa3nZ9sbc5soK+OoA74BsS3mL37yixCvUAQkiuA4Wz6YtwP/K47n2rv2ovzHZvoiQeA5FTQOschKkEwB0Q==}
-    engines: {node: '>= 10.14.2'}
     dev: true
 
   /diff-sequences/27.0.6:
@@ -2706,16 +2701,6 @@ packages:
       - utf-8-validate
     dev: true
 
-  /jest-diff/26.6.2:
-    resolution: {integrity: sha512-6m+9Z3Gv9wN0WFVasqjCL/06+EFCMTqDEUl/b87HYK2rAPTyfz4ZIuSlPhY51PIQRWx5TaxeF1qmXKe9gfN3sA==}
-    engines: {node: '>= 10.14.2'}
-    dependencies:
-      chalk: 4.1.2
-      diff-sequences: 26.6.2
-      jest-get-type: 26.3.0
-      pretty-format: 26.6.2
-    dev: true
-
   /jest-diff/27.2.4:
     resolution: {integrity: sha512-bLAVlDSCR3gqUPGv+4nzVpEXGsHh98HjUL7Vb2hVyyuBDoQmja8eJb0imUABsuxBeUVmf47taJSAd9nDrwWKEg==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -2772,11 +2757,6 @@ packages:
       '@types/node': 16.4.12
       jest-mock: 27.2.4
       jest-util: 27.2.4
-    dev: true
-
-  /jest-get-type/26.3.0:
-    resolution: {integrity: sha512-TpfaviN1R2pQWkIihlfEanwOXK0zcxrKEE4MlU6Tn7keoXdN6/3gK/xl0yEh8DOunn5pOVGKf8hB4R9gVh04ig==}
-    engines: {node: '>= 10.14.2'}
     dev: true
 
   /jest-get-type/27.0.6:
@@ -3730,16 +3710,6 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
-    dev: true
-
-  /pretty-format/26.6.2:
-    resolution: {integrity: sha512-7AeGuCYNGmycyQbCqd/3PWH4eOoX/OiCa0uphp57NVTeAGdJGaAliecxwBDHYQCIvrW7aDBZCYeNTP/WX69mkg==}
-    engines: {node: '>= 10'}
-    dependencies:
-      '@jest/types': 26.6.2
-      ansi-regex: 5.0.0
-      ansi-styles: 4.3.0
-      react-is: 17.0.2
     dev: true
 
   /pretty-format/27.2.4:
