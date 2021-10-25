@@ -12,7 +12,7 @@ specifiers:
   ky: ^0.28.5
   ky-universal: ^0.9.1
   rimraf: 3.0.2
-  tsup: 5.4.0
+  tsup: 5.5.0
   typescript: 4.4.3
 
 dependencies:
@@ -29,7 +29,7 @@ devDependencies:
   esmo: 0.10.1
   jest: 27.3.0
   rimraf: 3.0.2
-  tsup: 5.4.0_typescript@4.4.3
+  tsup: 5.5.0_typescript@4.4.3
   typescript: 4.4.3
 
 packages:
@@ -4259,8 +4259,8 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup/5.4.0_typescript@4.4.3:
-    resolution: {integrity: sha512-wm52TUJzDCvF9dJ3TxYtoJg8L7EjSYsOsH+jZhMMXfk1qZn6CdxFStwzMnwhyducdMBXHQNl7wZn+ioIhJoCHA==}
+  /tsup/5.5.0_typescript@4.4.3:
+    resolution: {integrity: sha512-khx/80b15RxK00UWqWlaizvrwO8kDZFBM0AbORKfjwKxxmzLuu35ceubzLg3wJgZ21E0BCLrCainh4zzJYImoA==}
     hasBin: true
     peerDependencies:
       typescript: ^4.2.3
