@@ -7,7 +7,7 @@ specifiers:
   esbuild: 0.13.4
   esbuild-jest: 0.5.0
   eslint: 8.1.0
-  esmo: 0.10.1
+  esmo: 0.11.0
   jest: 27.3.0
   ky: ^0.28.5
   ky-universal: ^0.9.1
@@ -26,7 +26,7 @@ devDependencies:
   esbuild: 0.13.4
   esbuild-jest: 0.5.0_esbuild@0.13.4
   eslint: 8.1.0
-  esmo: 0.10.1
+  esmo: 0.11.0
   jest: 27.3.0
   rimraf: 3.0.2
   tsup: 5.5.0_typescript@4.4.3
@@ -777,6 +777,10 @@ packages:
     dependencies:
       jest-diff: 27.2.4
       pretty-format: 27.2.4
+    dev: true
+
+  /@types/json5/0.0.29:
+    resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: true
 
   /@types/node/16.4.12:
@@ -1649,10 +1653,11 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-node-loader/0.4.2:
-    resolution: {integrity: sha512-3SieWnHgnhMKwn+qG2AjQq3Yf9RrgHeKGxGLauaLKfBTCpbm4nJbUt4CV3waHcRizILzlpZbESLkY9rnFHr6/w==}
+  /esbuild-node-loader/0.5.0:
+    resolution: {integrity: sha512-NKIaYsQw2D8WoaPWv7wbCXpM3QdYr7s0v7OZhAVmp5EnXIO8H+4CoPcrR6sm+Y3MP7slQcaKxipoQJeRuhQB+Q==}
     dependencies:
       esbuild: 0.13.4
+      tsconfig-paths: 3.11.0
     dev: true
 
   /esbuild-openbsd-64/0.13.4:
@@ -1835,13 +1840,13 @@ packages:
       - supports-color
     dev: true
 
-  /esmo/0.10.1:
-    resolution: {integrity: sha512-HvPfHu02E8BtW60qBy32TTmDy7IZq8sz+jmEiRUfey+BEqfHcP8bksM538VDfc5XKCOytm5KL4gGShzIfOr4sg==}
+  /esmo/0.11.0:
+    resolution: {integrity: sha512-qe0Y+csS2YoET98uYbSYdUrLOD0SErkgfI5F/EtkVfyMlJIIswWYFO1w03nkAKvWAIXSE3m335zr5f8mZMFR9A==}
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
       esbuild: 0.13.4
-      esbuild-node-loader: 0.4.2
+      esbuild-node-loader: 0.5.0
       esbuild-register: 3.0.0_esbuild@0.13.4
     dev: true
 
@@ -3202,6 +3207,13 @@ packages:
     resolution: {integrity: sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=}
     dev: true
 
+  /json5/1.0.1:
+    resolution: {integrity: sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==}
+    hasBin: true
+    dependencies:
+      minimist: 1.2.5
+    dev: true
+
   /json5/2.2.0:
     resolution: {integrity: sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==}
     engines: {node: '>=6'}
@@ -4089,6 +4101,11 @@ packages:
       ansi-regex: 5.0.1
     dev: true
 
+  /strip-bom/3.0.0:
+    resolution: {integrity: sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=}
+    engines: {node: '>=4'}
+    dev: true
+
   /strip-bom/4.0.0:
     resolution: {integrity: sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==}
     engines: {node: '>=8'}
@@ -4257,6 +4274,15 @@ packages:
 
   /ts-interface-checker/0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
+    dev: true
+
+  /tsconfig-paths/3.11.0:
+    resolution: {integrity: sha512-7ecdYDnIdmv639mmDwslG6KQg1Z9STTz1j7Gcz0xa+nshh/gKDAHcPxRbWOsA3SPp0tXP2leTcY9Kw+NAkfZzA==}
+    dependencies:
+      '@types/json5': 0.0.29
+      json5: 1.0.1
+      minimist: 1.2.5
+      strip-bom: 3.0.0
     dev: true
 
   /tsup/5.5.0_typescript@4.4.3:
