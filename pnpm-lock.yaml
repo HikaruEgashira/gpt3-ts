@@ -13,7 +13,7 @@ specifiers:
   ky-universal: ^0.9.1
   rimraf: 3.0.2
   tsup: 5.7.0
-  typescript: 4.4.3
+  typescript: 4.5.2
 
 dependencies:
   ky: 0.28.5
@@ -26,11 +26,11 @@ devDependencies:
   esbuild: 0.13.4
   esbuild-jest: 0.5.0_esbuild@0.13.4
   eslint: 8.2.0
-  esmo: 0.12.0_typescript@4.4.3
+  esmo: 0.12.0_typescript@4.5.2
   jest: 27.3.0
   rimraf: 3.0.2
-  tsup: 5.7.0_typescript@4.4.3
-  typescript: 4.4.3
+  tsup: 5.7.0_typescript@4.5.2
+  typescript: 4.5.2
 
 packages:
 
@@ -704,7 +704,7 @@ packages:
       fastq: 1.11.1
     dev: true
 
-  /@rollup/plugin-typescript/8.3.0_typescript@4.4.3:
+  /@rollup/plugin-typescript/8.3.0_typescript@4.5.2:
     resolution: {integrity: sha512-I5FpSvLbtAdwJ+naznv+B4sjXZUcIvLLceYpITAn7wAP8W0wqc5noLdGIp9HGVntNhRWXctwPYrSSFQxtl0FPA==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
@@ -714,7 +714,7 @@ packages:
     dependencies:
       '@rollup/pluginutils': 3.1.0
       resolve: 1.20.0
-      typescript: 4.4.3
+      typescript: 4.5.2
     dev: true
 
   /@rollup/pluginutils/3.1.0:
@@ -1779,15 +1779,15 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-node-loader/0.6.1_typescript@4.4.3:
+  /esbuild-node-loader/0.6.1_typescript@4.5.2:
     resolution: {integrity: sha512-MifpVA3LAmf/Yh+H7nVbODqipyjdvIPT+8ZR/Dkw8JEuH682IVhtEiwO4ZSEvqfLIFyQ1lXpSLeqvIjQdq+LaA==}
     peerDependencies:
       typescript: ^4.0
     dependencies:
-      '@rollup/plugin-typescript': 8.3.0_typescript@4.4.3
+      '@rollup/plugin-typescript': 8.3.0_typescript@4.5.2
       esbuild: 0.13.13
       joycon: 3.0.1
-      typescript: 4.4.3
+      typescript: 4.5.2
     transitivePeerDependencies:
       - rollup
       - tslib
@@ -2037,13 +2037,13 @@ packages:
       - supports-color
     dev: true
 
-  /esmo/0.12.0_typescript@4.4.3:
+  /esmo/0.12.0_typescript@4.5.2:
     resolution: {integrity: sha512-lYsWk4goy1nUlP3rpOO28Xbf6Q0ehs6t3tIwWzwfBGcoQhqGcFvmuIKAVr3ZMEVQ3NgXNrtaVNDRfpjxuwvWwg==}
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
       esbuild: 0.13.13
-      esbuild-node-loader: 0.6.1_typescript@4.4.3
+      esbuild-node-loader: 0.6.1_typescript@4.5.2
       esbuild-register: 3.1.2_esbuild@0.13.13
       import-meta-resolve: 1.1.1
     transitivePeerDependencies:
@@ -4483,7 +4483,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup/5.7.0_typescript@4.4.3:
+  /tsup/5.7.0_typescript@4.5.2:
     resolution: {integrity: sha512-Rt83NU4t3e0I2WyubR3doAAl/aijzNYVgWB8cZxem/6MfoutrOFssm6L8eMVIGvPPOYsDDVcAvXLwn+CUgeRAQ==}
     hasBin: true
     peerDependencies:
@@ -4505,7 +4505,7 @@ packages:
       rollup: 2.56.3
       sucrase: 3.20.2
       tree-kill: 1.2.2
-      typescript: 4.4.3
+      typescript: 4.5.2
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -4546,8 +4546,8 @@ packages:
       is-typedarray: 1.0.0
     dev: true
 
-  /typescript/4.4.3:
-    resolution: {integrity: sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==}
+  /typescript/4.5.2:
+    resolution: {integrity: sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
