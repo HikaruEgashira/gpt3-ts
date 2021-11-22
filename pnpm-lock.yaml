@@ -12,7 +12,7 @@ specifiers:
   ky: ^0.28.5
   ky-universal: ^0.9.1
   rimraf: 3.0.2
-  tsup: 5.7.0
+  tsup: 5.8.0
   typescript: 4.5.2
 
 dependencies:
@@ -29,7 +29,7 @@ devDependencies:
   esmo: 0.12.0_typescript@4.5.2
   jest: 27.3.0
   rimraf: 3.0.2
-  tsup: 5.7.0_typescript@4.5.2
+  tsup: 5.8.0_typescript@4.5.2
   typescript: 4.5.2
 
 packages:
@@ -4068,8 +4068,8 @@ packages:
       glob: 7.1.7
     dev: true
 
-  /rollup/2.56.3:
-    resolution: {integrity: sha512-Au92NuznFklgQCUcV96iXlxUbHuB1vQMaH76DHl5M11TotjOHwqk9CwcrT78+Tnv4FN9uTBxq6p4EJoYkpyekg==}
+  /rollup/2.60.1:
+    resolution: {integrity: sha512-akwfnpjY0rXEDSn1UTVfKXJhPsEBu+imi1gqBA1ZkHGydUnkV/fWCC90P7rDaLEW8KTwBcS1G3N4893Ndz+jwg==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -4483,8 +4483,8 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup/5.7.0_typescript@4.5.2:
-    resolution: {integrity: sha512-Rt83NU4t3e0I2WyubR3doAAl/aijzNYVgWB8cZxem/6MfoutrOFssm6L8eMVIGvPPOYsDDVcAvXLwn+CUgeRAQ==}
+  /tsup/5.8.0_typescript@4.5.2:
+    resolution: {integrity: sha512-cg87uof0dumoSMN/UddkelOstg9o+/yBK3g7NAmnbyJQCdTMiRocNfRZdF8+EpYpZ/kpCwUMMsvMCilMDWz5Rg==}
     hasBin: true
     peerDependencies:
       typescript: ^4.2.3
@@ -4502,7 +4502,7 @@ packages:
       joycon: 3.0.1
       postcss-load-config: 3.1.0
       resolve-from: 5.0.0
-      rollup: 2.56.3
+      rollup: 2.60.1
       sucrase: 3.20.2
       tree-kill: 1.2.2
       typescript: 4.5.2
