@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@hikae/gpt': file:.
   '@types/jest': 27.4.0
-  dotenv: 12.0.4
+  dotenv: 14.2.0
   esbuild: 0.14.13
   esbuild-jest: 0.5.0
   eslint: 8.7.0
@@ -22,7 +22,7 @@ dependencies:
 devDependencies:
   '@hikae/gpt': 'link:'
   '@types/jest': 27.4.0
-  dotenv: 12.0.4
+  dotenv: 14.2.0
   esbuild: 0.14.13
   esbuild-jest: 0.5.0_esbuild@0.14.13
   eslint: 8.7.0
@@ -1528,8 +1528,8 @@ packages:
       webidl-conversions: 5.0.0
     dev: true
 
-  /dotenv/12.0.4:
-    resolution: {integrity: sha512-oWdqbSywffzH1l4WXKPHWA0TWYpqp7IyLfqjipT4upoIFS0HPMqtNotykQpD4iIg0BqtNmdgPCh2WMvMt7yTiw==}
+  /dotenv/14.2.0:
+    resolution: {integrity: sha512-05POuPJyPpO6jqzTNweQFfAyMSD4qa4lvsMOWyTRTdpHKy6nnnN+IYWaXF+lHivhBH/ufDKlR4IWCAN3oPnHuw==}
     engines: {node: '>=12'}
     dev: true
 
