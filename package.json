@@ -14,11 +14,11 @@
         "@hikae/gpt": "file:.",
         "@types/jest": "27.4.0",
         "dotenv": "16.0.0",
-        "esbuild": "0.14.14",
+        "esbuild": "0.14.19",
         "esbuild-jest": "0.5.0",
         "eslint": "8.8.0",
         "esmo": "0.14.0",
-        "jest": "27.4.7",
+        "jest": "27.5.0",
         "rimraf": "3.0.2",
         "tsup": "5.11.13",
         "typescript": "4.5.5"
