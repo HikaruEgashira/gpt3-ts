@@ -13,7 +13,7 @@
     "devDependencies": {
         "@hikae/gpt": "file:.",
         "@types/jest": "27.4.0",
-        "dotenv": "14.3.2",
+        "dotenv": "16.0.0",
         "esbuild": "0.14.14",
         "esbuild-jest": "0.5.0",
         "eslint": "8.8.0",
