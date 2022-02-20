@@ -7,7 +7,7 @@
         "package-check": "npx @skypack/package-check"
     },
     "dependencies": {
-        "ky": "^0.28.5",
+        "ky": "^0.29.0",
         "ky-universal": "^0.10.0"
     },
     "devDependencies": {
