@@ -16,7 +16,7 @@
         "dotenv": "16.0.0",
         "esbuild": "0.14.38",
         "esbuild-jest": "0.5.0",
-        "eslint": "8.14.0",
+        "eslint": "8.15.0",
         "esmo": "0.14.1",
         "jest": "28.1.0",
         "rimraf": "3.0.2",
