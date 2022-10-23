@@ -10,14 +10,14 @@ specifiers:
   esmo: 0.16.3
   jest: 29.2.0
   ky: ^0.31.0
-  ky-universal: ^0.10.0
+  ky-universal: ^0.11.0
   rimraf: 3.0.2
   tsup: 6.2.3
   typescript: 4.8.4
 
 dependencies:
   ky: 0.31.0
-  ky-universal: 0.10.0_ky@0.31.0
+  ky-universal: 0.11.0_ky@0.31.0
 
 devDependencies:
   '@hikae/gpt': 'link:'
@@ -3461,19 +3461,19 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /ky-universal/0.10.0_ky@0.31.0:
-    resolution: {integrity: sha512-PHZZm4QcMxc1xZ9uNg3XWZCJx+b8heP6gEBhDuew42C2MTe42Q+f7w05xtR7/kno584KYnyZm0QChkpwUqzCuQ==}
-    engines: {node: '>=14'}
+  /ky-universal/0.11.0_ky@0.31.0:
+    resolution: {integrity: sha512-65KyweaWvk+uKKkCrfAf+xqN2/epw1IJDtlyCPxYffFCMR8u1sp2U65NtWpnozYfZxQ6IUzIlvUcw+hQ82U2Xw==}
+    engines: {node: '>=14.16'}
     peerDependencies:
-      ky: '>=0.26.0'
-      web-streams-polyfill: '>=3.0.1'
+      ky: '>=0.31.4'
+      web-streams-polyfill: '>=3.2.1'
     peerDependenciesMeta:
       web-streams-polyfill:
         optional: true
     dependencies:
       abort-controller: 3.0.0
       ky: 0.31.0
-      node-fetch: 3.2.0
+      node-fetch: 3.2.10
     dev: false
 
   /ky/0.31.0:
@@ -3671,8 +3671,8 @@ packages:
     engines: {node: '>=10.5.0'}
     dev: false
 
-  /node-fetch/3.2.0:
-    resolution: {integrity: sha512-8xeimMwMItMw8hRrOl3C9/xzU49HV/yE6ORew/l+dxWimO5A4Ra8ld2rerlJvc/O7et5Z1zrWsPX43v1QBjCxw==}
+  /node-fetch/3.2.10:
+    resolution: {integrity: sha512-MhuzNwdURnZ1Cp4XTazr69K0BTizsBroX7Zx3UgDSVcZYKF/6p0CBe4EUb/hLqmzVhl0UpYfgRljQ4yxE+iCxA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       data-uri-to-buffer: 4.0.0
