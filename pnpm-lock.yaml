@@ -9,15 +9,15 @@ specifiers:
   eslint: 8.26.0
   esmo: 0.16.3
   jest: 29.2.2
-  ky: ^0.31.0
+  ky: ^0.32.0
   ky-universal: ^0.11.0
   rimraf: 3.0.2
   tsup: 6.3.0
   typescript: 4.8.4
 
 dependencies:
-  ky: 0.31.0
-  ky-universal: 0.11.0_ky@0.31.0
+  ky: 0.32.2
+  ky-universal: 0.11.0_ky@0.32.2
 
 devDependencies:
   '@hikae/gpt': 'link:'
@@ -3420,7 +3420,7 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /ky-universal/0.11.0_ky@0.31.0:
+  /ky-universal/0.11.0_ky@0.32.2:
     resolution: {integrity: sha512-65KyweaWvk+uKKkCrfAf+xqN2/epw1IJDtlyCPxYffFCMR8u1sp2U65NtWpnozYfZxQ6IUzIlvUcw+hQ82U2Xw==}
     engines: {node: '>=14.16'}
     peerDependencies:
@@ -3431,12 +3431,12 @@ packages:
         optional: true
     dependencies:
       abort-controller: 3.0.0
-      ky: 0.31.0
+      ky: 0.32.2
       node-fetch: 3.2.10
     dev: false
 
-  /ky/0.31.0:
-    resolution: {integrity: sha512-C27vqDb3vuxy4mi/x1wt9P1ES0QxEJg3CbPz2t3lTaQ4AvR/hkwES06yPdqol+q3hH+DrZKb/PKD+pAQkharNg==}
+  /ky/0.32.2:
+    resolution: {integrity: sha512-eBJeF6IXNwX5rksdwBrE2rIJrU2d84GoTvdM7OmmTIwUVXEMd72wIwvT+nyhrqtv7AzbSNsWz7yRsHgVhj1uog==}
     engines: {node: '>=14.16'}
     dev: false
 
