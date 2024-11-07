@@ -3,7 +3,7 @@ on: [push]
 jobs:
   build:
     name: Build, lint, and test on Node
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Cache pnpm modules
