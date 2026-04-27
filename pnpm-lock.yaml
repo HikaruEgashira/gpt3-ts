@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  minimist@~1.2.5: 1.2.8
-
 dependencies:
   ky:
     specifier: ^1.0.0
